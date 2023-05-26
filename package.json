@@ -1,5 +1,5 @@
 {
-  "name": "blight",
+  "name": "@4lch4/blight",
   "displayName": "Blight",
   "version": "0.0.2",
   "description": "A CLI tool for interacting with the Busylight HTTP app.",
