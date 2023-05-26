@@ -1,0 +1,33 @@
+version: 3
+
+tasks:
+  pretty:
+    aliases: [p, format, fmt]
+    desc: Uses the Prettier CLI tool to format the codebase.
+    cmds: [prettier --write .]
+
+  build:
+    aliases: [bd]
+    desc: Builds the project by transpiling the codebase into JavaScript.
+    cmds:
+      - npm run build
+
+  clean:
+    aliases: [c]
+    desc: Deletes the build output directory, any installed dependencies, and any generated files.
+    cmds: [rm -rf dist node_modules package-lock.json yarn.lock pnpm-lock.yaml]
+
+  push:
+    aliases: [dd]
+    desc: Push any git changes and tags to the remote repository.
+    deps: ['build']
+    cmds:
+      - git push
+      - git push --tags
+
+  install:
+    desc: Builds the CLI and installs it globally.
+    cmds:
+      - npm i
+      - task build
+      - npm i -g .
