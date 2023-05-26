@@ -1,7 +1,7 @@
 {
   "name": "blight",
   "displayName": "Blight",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A CLI tool for interacting with the Busylight HTTP app.",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
